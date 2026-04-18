@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lookbook_posts",
+  "info": {
+    "singularName": "lookbook-post",
+    "pluralName": "lookbook-posts",
+    "displayName": "Lookbook Post",
+    "description": "Editorial shoots and style stories"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
