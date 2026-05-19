@@ -1,7 +1,6 @@
 import type { Core } from '@strapi/strapi';
 
 const config: Core.Config.Middlewares = [
-  'strapi::logger',
   'strapi::errors',
   {
     name: 'strapi::security',
@@ -10,7 +9,7 @@ const config: Core.Config.Middlewares = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com', '*.cloudinary.com'],
           upgradeInsecureRequests: null,
         },
       },
@@ -21,7 +20,7 @@ const config: Core.Config.Middlewares = [
     config: {
       origin: [
         'http://localhost:3000',
-        'https://carmuelegance.com',
+        'https://calouraelegance.com',
         'https://*.vercel.app',
       ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
@@ -30,6 +29,7 @@ const config: Core.Config.Middlewares = [
     },
   },
   'strapi::poweredBy',
+  'strapi::logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',
