@@ -34,7 +34,7 @@
       "allowedTypes": ["images"]
     },
     "description": {
-      "type": "richtext"
+      "type": "text"
     },
     "featured": {
       "type": "boolean",

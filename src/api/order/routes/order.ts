@@ -1,2 +1,16 @@
-import { factories } from '@strapi/strapi'
-export default factories.createCoreRouter('api::order.order')
+export default {
+  routes: [
+    {
+      method: 'POST',
+      path: '/orders',
+      handler: 'order.create',
+      config: { policies: [], middlewares: [] },
+    },
+    {
+      method: 'PUT',
+      path: '/orders/:id',
+      handler: 'order.update',
+      config: { policies: [], middlewares: [] },
+    },
+  ],
+}
