@@ -21,8 +21,7 @@ const config: Core.Config.Middlewares = [
       origin: [
         'http://localhost:3000',
         'https://calouraelegance.com',
-        'https://*.vercel.app',
-        'https://*.netlify.app',
+        'https://carmu-elegance.netlify.app',
       ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
